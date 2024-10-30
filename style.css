@@ -1,0 +1,234 @@
+/*
+
+Plugin Name: ixzlp WP Share
+Plugin URI: https://www.ixzlp.com/
+Description: Display social media sharing buttons under your blog posts. | Follow me on <a href="https://www.twitter.com/ixzlp" target="_blank" alt="Dominik Rieken ixzlp on Twitter">Twitter</a>
+Version: 1.1
+Author: Dominik Rieken
+Author URI: https://www.twitter.com/ixzlp/
+Update Server: https://www.github.com/ixzlp/ixzlpWPShare/
+Min WP Version: 3.0
+
+*/
+
+@font-face {
+	font-family: 'ixzlp-wp-share';
+	src: url('font/ixzlp-wp-share.eot?76725207');
+	src: url('font/ixzlp-wp-share.eot?76725207#iefix') format('embedded-opentype'),
+	url('font/ixzlp-wp-share.woff2?76725207') format('woff2'),
+	url('font/ixzlp-wp-share.woff?76725207') format('woff'),
+	url('font/ixzlp-wp-share.ttf?76725207') format('truetype'),
+	url('font/ixzlp-wp-share.svg?76725207#ixzlp-wp-share') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.ixzlp-wp-share-wrapper div {
+	float: left;
+	margin-right: 10px;
+	font-size: 12px;
+}
+
+.ixzlp-wp-share-wrapper div.share-on {
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 12px,
+	font-weight: bold;
+}
+
+.facebook {
+	transition: all 0.3s ease 0s;
+
+}
+
+.facebook:hover {
+	opacity: .9;
+	transition: all 0.3s ease 0s;
+}
+
+.ixzlp-wp-share-wrapper div.facebook {
+	background-color: #3a5795;
+	padding: 0px 12px;
+	border-radius: 5px;
+	color: #FFF;
+}
+
+.ixzlp-wp-share-wrapper div.facebook a {
+	color: white;
+}
+
+.twitter {
+	transition: all 0.3s ease 0s;
+
+}
+
+.twitter:hover {
+	opacity: .9;
+	transition: all 0.3s ease 0s;
+}
+
+.ixzlp-wp-share-wrapper div.twitter {
+	background-color: #55acee;
+	padding: 0px 12px;
+	border-radius: 5px;
+	color: #FFF;
+}
+
+.ixzlp-wp-share-wrapper div.twitter a {
+	color: white;
+}
+
+linkedin {
+	transition: all 0.3s ease 0s;
+
+}
+
+.linkedin:hover {
+	opacity: .9;
+	transition: all 0.3s ease 0s;
+}
+
+.ixzlp-wp-share-wrapper div.linkedin {
+	background-color: #007bb6;
+	padding: 0px 12px;
+	border-radius: 5px;
+	color: #FFF;
+}
+
+.ixzlp-wp-share-wrapper div.linkedin a {
+	color: white;
+}
+
+.xing {
+	transition: all 0.3s ease 0s;
+
+}
+
+.xing:hover {
+	opacity: .9;
+	transition: all 0.3s ease 0s;
+}
+
+.ixzlp-wp-share-wrapper div.xing {
+	background-color: #aed631;
+	padding: 0px 12px;
+	border-radius: 5px;
+	color: #FFF;
+}
+
+.ixzlp-wp-share-wrapper div.xing a {
+	color: white;
+}
+
+.googleplus {
+	transition: all 0.3s ease 0s;
+
+}
+
+.googleplus:hover {
+	opacity: .9;
+}
+
+.ixzlp-wp-share-wrapper div.googleplus {
+	background-color: #df4a3b;
+	padding: 0px 12px;
+	border-radius: 5px;
+	color: #FFF;
+}
+
+.ixzlp-wp-share-wrapper div.googleplus a {
+	color: white;
+}
+
+.whatsapp {
+	transition: all 0.3s ease 0s;
+}
+
+.whatsapp:hover {
+	opacity: .9;
+
+}
+
+.ixzlp-wp-share-wrapper div.whatsapp {
+	background-color: #00bda6;
+	padding: 0px 12px;
+	border-radius: 5px;
+	color: #FFF;
+}
+
+.ixzlp-wp-share-wrapper div.whatsapp a {
+	color: white;
+}
+
+.pinterest {
+	transition: all 0.3s ease 0s;
+}
+
+.pinterest:hover {
+	opacity: .9;
+
+}
+
+.ixzlp-wp-share-wrapper div.pinterest {
+	background-color: #c00a20;
+	padding: 0px 12px;
+	border-radius: 5px;
+	color: #FFF;
+}
+
+.ixzlp-wp-share-wrapper div.pinterest a {
+	color: white;
+}
+
+.ixzlp-wp-share-wrapper div a {
+	text-decoration: none;
+	border: none;
+}
+
+.clear {
+	clear: left;
+}
+
+[class^="ixzlp-wp-share-icon-"]:before,
+[class*=" ixzlp-wp-share-icon-"]:before {
+	font-family: "ixzlp-wp-share";
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	color: #FFF;
+	margin-right: 15px;
+	margin-left: 5px;
+}
+
+.ixzlp-wp-share-icon-twitter:before {
+	content: '\f099';
+}
+
+.ixzlp-wp-share-icon-facebook:before {
+	content: '\f09a';
+
+}
+
+.ixzlp-wp-share-icon-googleplus:before {
+	content: '\f0d5';
+}
+
+.ixzlp-wp-share-icon-linkedin:before {
+	content: '\f0e1';
+}
+
+.ixzlp-wp-share-icon-xing:before {
+	content: '\f168';
+}
+
+.ixzlp-wp-share-icon-tumblr:before {
+	content: '\f173';
+}
+
+.ixzlp-wp-share-icon-pinterest:before {
+	content: '\f231';
+}
+
+.ixzlp-wp-share-icon-whatsapp:before {
+	content: '\f232';
+}
